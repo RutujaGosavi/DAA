@@ -1,58 +1,49 @@
-/*Implement a problem of smallest number with at least n 
-trailing zeroes in factorial.
-Statement: Given a number n. The task is to find the smallest 
-number whose factorial contains at least n trailing zeroes.
-USE DIVIDE AND CONQUER TECHNIQUE*/
-
+//Implement a problem of number of zeroes,
+//Given an array of Is and Os which has all is first. followind by all Os Find the susher of Os. Count the number of zeroes in the given array
 #include<iostream>
 using namespace std;
-
-int counttrailingzero(int num)
-{
- int cnt=0;
- while (num>=5)
- {
-    num/=5;
-    cnt+=num;
-
- }
- return cnt;
-}
-
-int findMinFact(int n)
-{
-    if(n==0)
-    return 0;
-
-    int high,low,mid;
-    
-    low=0;
-    high=5*n;
-
-    while (low<high)
-    {
-        mid=(low+high)/2;
-
-        if(counttrailingzero(mid)<n)
-        {
-            low=mid+1;
-        }
-        else
-        {
-            high=mid;
-        }
-    }
-    return low;
-}
-
 int main()
 {
-    int n,result;
-    cout<<"Enter the number of Trailing Zeroes Required : ";
-    cin>>n;
+int i, n, key;
+int a[20];
+cout<<"enter total no. of keys"<<endl;
+int count=0;
+cin>>n;
+cout<<"enter actual keys: "<<endl;
+for(i=0;i<n;i++)
+{
+cin>>a[i];
+}
+int low=0;
+int high=n-1;
 
-    result=findMinFact(n);
-    cout<<"The smallest number whose factorial has at least  "<<n<<"  trailing zeroes is : "<<result<<endl;
-   
-   return 0;
+while(low<=high)
+{
+    int mid=(low+high)/2;
+if(a[mid]==0) 
+{
+if(a[mid]== 0 && a[mid-1]==1)
+{
+count=n-mid;
+break;
+}
+else
+{
+high=mid-1;
+}
+}
+else
+{
+low=mid+1;
+}
+}
+if(count==0)
+{
+cout<<"Not found"<<endl;
+}
+else
+{
+cout<<"count of zeros is"<<count<<endl;
+}
+return 0;
 }
