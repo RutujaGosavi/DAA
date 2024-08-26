@@ -1,10 +1,5 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
+//Implement a problem of move all zeroes to end of array.
+//Given an array of random mumbers, Push all the zero's of a given array to the end of the array.
 
 #include<iostream>
 using namespace std;
