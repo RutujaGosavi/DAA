@@ -1,11 +1,8 @@
-//Implement a problem of activity selection problem with K CO2 persons.
-
-//Statement: Given two arrays S[] and E[] of size N denoting starting and closing time of the shops and an integer value K denoting the number of people, the task is to find out the maximurn number of shops they can visit in total if they visit each shop optimally based on the followi the following conditions:
-
-//A shop can be visited by only one person
-
-//A person cannot visit another shop if its timing collide with it
-
+/*Implement a problem of activity selection problem with K persons.
+Statement: Given two arrays S[] and E[] of size N denoting starting and closing time of the shops and an integer value K denoting the number of people, the task is to find out the maximurn number of shops they can visit in total if they visit each shop optimally based on the followi the following conditions:
+A shop can be visited by only one person
+A person cannot visit another shop if its timing collide with it
+*/
 
 
 #include<iostream>
